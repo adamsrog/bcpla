@@ -1,1 +1,6 @@
-{{outlet}}
+<h1>Occupation</h1>
+<ul>
+	{{#each occupation in model}}
+	<li>{{occupation.id}}: {{occupation.title}}</li>
+	{{/each}}
+</ul>

@@ -1,1 +1,6 @@
-{{outlet}}
+<h1>Crosswalk</h1>
+<ul>
+	{{#each crosswalk in model}}
+	<li>{{crosswalk.id}}: {{crosswalk.title}}</li>
+	{{/each}}
+</ul>
