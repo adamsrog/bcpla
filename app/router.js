@@ -6,6 +6,8 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('occupation');
+  this.route('crosswalk');
 });
 
 export default Router;
