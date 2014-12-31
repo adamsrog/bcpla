@@ -1576,7 +1576,6 @@ Crosswalk.reopenClass({
       "endDate":"Present",
       "title":"Cryptologic Technician, Technical (1/09-Present)",
       "category":"database",
-      "FIELD6":" "
     },
     {
       "id":"CGA-C130-005",
@@ -2095,20 +2094,6 @@ Crosswalk.reopenClass({
       "endDate":"Present",
       "title":"Special Warfare Operator (10/06-Present)",
       "category":"business analytics"
-    },
-    {
-      "id":"",
-      "startDate":"2/1/2012",
-      "endDate":"Present",
-      "title":"Intelligence Specialist (2/12-Present)",
-      "category":"business intelligence"
-    },
-    {
-      "id":"",
-      "startDate":"11/1/2011",
-      "endDate":"Present",
-      "title":"Operations Specialist (11/11-Present)",
-      "category":"business intelligence"
     },
     {
       "id":"CGR-IS-002",
