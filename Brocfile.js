@@ -19,11 +19,11 @@ var app = new EmberApp();
 
 // import bootstrap
 app.import({
-	development: 'bower_components/bootstrap/dist/css/boostrap.css',
+	development: 'bower_components/bootstrap/dist/css/bootstrap.css',
 	production: 'bower_components/bootstrap/dist/css/bootstrap.min.css'
 });
 app.import({
-	development: '/bower_components/bootstrap/dist/js/bootstrap.js',
+	development: 'bower_components/bootstrap/dist/js/bootstrap.js',
 	production: 'bower_components/bootstrap/dist/js/bootstrap.min.js'
 });
 
