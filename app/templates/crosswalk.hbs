@@ -1,7 +1,63 @@
-<h1>Courses</h1>
-<ul>
-	{{#each crosswalk in model}}
-	<li>{{crosswalk.id}}: {{crosswalk.title}}</li>
-	<li>{{crosswalk.category}}</li>
-	{{/each}}
-</ul>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h3>Courses</h3>
+			<div class="btn-group">
+        <button type="button" {{bind-attr class=":btn :dropdown-toggle"}} data-toggle="dropdown">
+          {{#if sortCategory}}{{sortCategory}}{{else}}Categories{{/if}} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a {{action 'sortCoursesByCategory' ''}}>All</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'business analytics'}}>Business Analytics</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'business intelligence'}}>Business Intelligence</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Computer Network'}}>Computer Networking</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Data analysis'}}>Data Analysis</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'database'}}>Database</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'database administration'}}>Database Administration</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Electronic health records'}}>Electronic Health Records</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Health Informatics'}}>Health Informatics</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Health Technician'}}>Health Technician</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Health Information technology'}}>Health Information Technology</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Health Care Assistant'}}>Healthcare Assistant</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'health care database'}}>Healthcare Database</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'health care Specialist'}}>Healthcare Specialist</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Healthcare Technology'}}>Healthcare Technology</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'help desk'}}>Help Desk</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Information technology'}}>Information Technology</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Medical Assistant'}}>Medical Assistant</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Medical Charting'}}>Medical Charting</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Medical Records'}}>Medical Records</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'patient care'}}>Patient Care</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Pharmacy Technician'}}>Pharmacy Technician</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'pharmacy specialist'}}>Pharmacy Specialist</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Network Administrator'}}>Network Administrator</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Network Analyst'}}>Network Analyst</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Network Security'}}>Network Security</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Network Systems'}}>Network Systems</a></li>
+          <li><a {{action 'sortCoursesByCategory' 'Software Development'}}>Software Development</a></li>
+        </ul>
+      </div> {{!-- /.btn-group --}}
+		</div>
+		<div class="col-md-6">
+			<small class="pull-right">
+				Showing {{sortedCourses.length}} of {{model.length}} occupations
+			</small><br>
+			<div class="pull-right">
+				{{page-numbers content=pagedContent}}
+			</div>
+		</div>
+	</div>
+		<ul class="list-group">
+			{{#each course in pagedContent}}
+			<li class="list-group-item">
+				{{course.title}}<br>
+				<small>{{course.id}}</small>
+				<small class="pull-right">{{course.category}}</small>
+			</li>
+			{{/each}}
+		</ul>
+
+		<div class="pull-right">
+			{{page-numbers content=pagedContent}}
+		</div>
+</div>

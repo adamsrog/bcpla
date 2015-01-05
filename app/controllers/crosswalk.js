@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 
 	// set up sorting of the occupations
 	sortCategory: '',
-	sortedOccupations: Ember.computed('model.content', 'sortCategory', function() {
+	sortedCourses: Ember.computed('model.content', 'sortCategory', function() {
 		var model = this.get('model');
 		var category = this.get('sortCategory');
 		if (category === '') { return model; }
@@ -13,11 +13,11 @@ export default Ember.Controller.extend({
 	}),
 
 	// set up pagination
-	pagedContent: pagedArray('sortedOccupations', { perPageBinding: 'perPage' }),
+	pagedContent: pagedArray('sortedCourses', { perPageBinding: 'perPage' }),
   perPage: 15,
 
   actions: {
-  	sortOccupationsByCategory: function(category) {
+  	sortCoursesByCategory: function(category) {
   		this.set('sortCategory', category);
   	}
   }
