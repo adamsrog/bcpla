@@ -32,6 +32,7 @@
     "express": "^4.8.5",
     "glob": "^4.0.5",
     "ember-cli-spinkit": "0.0.5",
-    "ember-cli-pagination": "~0.6.3"
+    "ember-cli-pagination": "~0.6.3",
+    "ember-cli-icheck": "0.0.7"
   }
 }
