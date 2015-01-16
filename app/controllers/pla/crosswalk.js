@@ -114,7 +114,8 @@ export default Ember.Controller.extend({
 	}),
 
 	// set up pagination
-	pagedContent: pagedArray('sortedCourses', { perPageBinding: 'perPage' }),
+	pagedContent: pagedArray('sortedCourses', { pageBinding: "page", perPageBinding: 'perPage' }),
+	page: 1,
   perPage: 10,
 
   actions: {

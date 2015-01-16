@@ -1,27 +1,27 @@
 
-  <div class="row">
-    <div class="col-md-2">
-      <h3>Occupations</h3>
-      <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
-    </div>
-    <div class="col-md-7">
-      {{#if pagedContent}}
-      {{page-numbers content=pagedContent}}
-      {{/if}}
-    </div>
-    <div class="col-sm-3">
-      <div class="input-group">
-        {{input value=filterQuery type="text" placeholder="Search by title..." class="form-control"}}
-        <span class="input-group-btn">
-          {{#if filterQuery}}
-          <button class="btn btn-default glyphicon glyphicon-remove" type="button" {{action "clearFilterQuery"}}></button>
-          {{else}}
-          <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
-          {{/if}}
-        </span>
-      </div> {{!-- /.input-group --}}
-    </div> {{!-- /.col col-sm-3 --}}
+<div class="row">
+  <div class="col-md-2">
+    <h3>Occupations</h3>
+    <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
   </div>
+  <div class="col-md-7">
+    {{#if pagedContent}}
+    {{page-numbers content=pagedContent}}
+    {{/if}}
+  </div>
+  <div class="col-sm-3">
+    <div class="input-group">
+      {{input value=filterQuery type="text" placeholder="Search by title..." class="form-control"}}
+      <span class="input-group-btn">
+        {{#if filterQuery}}
+        <button class="btn btn-default glyphicon glyphicon-remove" type="button" {{action "clearFilterQuery"}}></button>
+        {{else}}
+        <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+        {{/if}}
+      </span>
+    </div> {{!-- /.input-group --}}
+  </div> {{!-- /.col col-sm-3 --}}
+</div>
 
 
 <div class="row">
@@ -98,10 +98,17 @@
       </li>
       {{/if}}
     </ul>
-    {{#if pagedContent}}
-    <div class="row">
-    	{{page-numbers content=pagedContent}}
-    </div>
-    {{/if}}
   </div>
 </div>
+
+{{#if pagedContent}}
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-7">
+    {{#if pagedContent}}
+    {{page-numbers content=pagedContent}}
+    {{/if}}
+  </div>
+  <div class="col-sm-3"></div>
+</div>
+{{/if}}

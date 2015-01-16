@@ -19,3 +19,7 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 }
+
+.container .text-muted {
+  margin: 20px 0;
+}
