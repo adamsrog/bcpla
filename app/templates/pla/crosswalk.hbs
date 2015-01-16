@@ -1,78 +1,70 @@
 <div class="row">
   <div class="col-md-2">
-    <h3>Courses</h3>
+    <h3>Occupations</h3>
     <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
     <hr>
-    {{i-check}} Business Analytics <br>
-    {{i-check}} Business Intelligence <br>
-    {{i-check}} Computer Networking <br>
-    {{i-check}} Data Analysis <br>
-    {{i-check}} Database <br>
-    {{i-check}} Database Administration <br>
-    {{i-check}} Electronic Health Records <br>
-    {{i-check}} Health Informatics <br>
-    {{i-check}} Health Technician <br>
-    {{i-check}} Health Information Technology <br>
-    
+    {{i-check checked=selectedBusinessAnalytics}} Business Analytics <br>
+    {{i-check checked=selectedBusinessIntelligence}} Business Intelligence <br>
+    {{i-check checked=selectedComputerNetwork}} Computer Network <br>
+    {{i-check checked=selectedDataAnalysis}} Data Analysis <br>
+    {{i-check checked=selectedDatabase}} Database <br>
+    {{i-check checked=selectedDatabaseAdministration}} Database Admin <br>
+    {{i-check checked=selectedElectronicHealthRecords}} EHRs <br>
+    {{i-check checked=selectedHealthCare}} Health Care <br>
+    {{i-check checked=selectedHealthInformatics}} Health Informatics <br>
+    {{i-check checked=selectedHealthInformationTechnology}} Health IT <br>
+    {{i-check checked=selectedHealthTechnician}} Health Technician <br>
+    {{i-check checked=selectedHealthcareAnalyst}} Healthcare Analyst <br>
+    {{i-check checked=selectedHealthCareAssistant}} Healthcare Assistant <br>
+    {{i-check checked=selectedHealthCareDatabase}} Healthcare Database <br>
+    {{i-check checked=selectedHealthCareSpecialist}} Healthcare Specialist <br>
+    {{i-check checked=selectedHealthcareTechnology}} Healthcare Tech <br>
+    {{i-check checked=selectedHelpDesk}} Help Desk <br>
+    {{i-check checked=selectedInformationTechnology}} IT <br>
+    {{i-check checked=selectedMedicalAssistant}} Medical Assistant <br>
+    {{i-check checked=selectedMedicalCharting}} Medical Charting <br>
+    {{i-check checked=selectedMedicalRecords}} Medical Records <br>
+    {{i-check checked=selectedNetworkAdministrator}} Network Admin <br>
+    {{i-check checked=selectedNetworkAnalyst}} Network Analyst <br>
+    {{i-check checked=selectedNetworkSecurity}} Network Security <br>
+    {{i-check checked=selectedNetworkSystems}} Network Systems <br>
+    {{i-check checked=selectedPatientCare}} Patient Care <br>
+    {{i-check checked=selectedPharmacy}} Pharmacy <br>
+    {{i-check checked=selectedPharmacySpecialist}} Pharmacy Specialist <br>
+    {{i-check checked=selectedPharmacyTechnician}} Pharmacy Technician <br>
+    {{i-check checked=selectedSoftwareDevelopment}} Software Development <br>    
     
   </div>
   <div class="col-md-10">
     <div class="row">
-    	<div class="col-md-6">
-    		
-    		<div class="btn-group">
-          <button type="button" {{bind-attr class=":btn :dropdown-toggle"}} data-toggle="dropdown">
-            {{#if sortCategory}}{{sortCategory}}{{else}}Categories{{/if}} <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu">
-            <li><a {{action 'sortCoursesByCategory' ''}}>All</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'business analytics'}}>Business Analytics</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'business intelligence'}}>Business Intelligence</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Computer Network'}}>Computer Networking</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Data analysis'}}>Data Analysis</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'database'}}>Database</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'database administration'}}>Database Administration</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Electronic health records'}}>Electronic Health Records</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Health Informatics'}}>Health Informatics</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Health Technician'}}>Health Technician</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Health Information technology'}}>Health Information Technology</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Health Care Assistant'}}>Healthcare Assistant</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'health care database'}}>Healthcare Database</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'health care Specialist'}}>Healthcare Specialist</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Healthcare Technology'}}>Healthcare Technology</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'help desk'}}>Help Desk</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Information technology'}}>Information Technology</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Medical Assistant'}}>Medical Assistant</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Medical Charting'}}>Medical Charting</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Medical Records'}}>Medical Records</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'patient care'}}>Patient Care</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Pharmacy Technician'}}>Pharmacy Technician</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'pharmacy specialist'}}>Pharmacy Specialist</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Network Administrator'}}>Network Administrator</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Network Analyst'}}>Network Analyst</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Network Security'}}>Network Security</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Network Systems'}}>Network Systems</a></li>
-            <li><a {{action 'sortCoursesByCategory' 'Software Development'}}>Software Development</a></li>
-          </ul>
-        </div> {{!-- /.btn-group --}}
-    	</div>
-    	<div class="col-md-6">
-    		<div class="pull-right">
-    			{{page-numbers content=pagedContent}}
-    		</div>
-    	</div>
+    	{{page-numbers content=pagedContent}}
     </div>
+
     <ul class="list-group">
     	{{#each course in pagedContent}}
     	<li class="list-group-item">
-    		{{course.title}}<br>
-    		<small>{{course.id}}</small>
-    		<small class="pull-right">{{course.category}}</small>
+        <div class="row">
+          <div class="col-md-1">
+            <img {{bind-attr src=course.branchImage alt=course.branch}} width=75>
+          </div>
+          <div class="col-md-11">
+            <strong><a {{bind-attr href=course.url}} target="_blank">{{course.title}}</a></strong>
+            <span class="pull-right">
+                {{match-badge course.match}}
+            </span><br>
+            <small>{{course.id}}</small><br>
+            <small>{{course.category}}
+            {{!-- {{#each category in course.category}}
+              {{category}}
+            {{/each}} --}}
+            </small>
+          </div>
+        </div>
     	</li>
     	{{/each}}
     </ul>
 
-    <div class="pull-right">
+    <div class="row">
     	{{page-numbers content=pagedContent}}
     </div>
   </div>
