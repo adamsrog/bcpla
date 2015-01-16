@@ -5,16 +5,18 @@
       <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
     </div>
     <div class="col-md-7">
+      {{#if pagedContent}}
       {{page-numbers content=pagedContent}}
+      {{/if}}
     </div>
-    <div class="col-md-3">
+    <div class="col-sm-3">
       <div class="input-group">
-        {{input value=filterQuery type="search" placeholder="Search by title..." class="form-control"}}
+        {{input value=filterQuery type="text" placeholder="Search by title..." class="form-control"}}
         <span class="input-group-btn">
           {{#if filterQuery}}
-            <button class="btn btn-default" type="button" {{action "clearFilterQuery"}}><i class="fa fa-times"></i></button>
+          <button class="btn btn-default glyphicon glyphicon-remove" type="button" {{action "clearFilterQuery"}}></button>
           {{else}}
-            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+          <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
           {{/if}}
         </span>
       </div> {{!-- /.input-group --}}
@@ -27,7 +29,7 @@
     <hr style="margin-top: 0px">
     <h5>
       <span>Filters</span>
-      <button class="pull-right">x</button>
+      {{#if categories}}<button class="pull-right">x</button>{{/if}}
     </h5>
 
     {{i-check checked=selectedBusinessAnalytics}} Business Analytics <br>
@@ -64,6 +66,7 @@
   </div>
   <div class="col-md-10">
     <ul class="list-group">
+      {{#if pagedContent}}
     	{{#each course in pagedContent}}
     	<li class="list-group-item">
         <div class="row">
@@ -85,10 +88,20 @@
         </div>
     	</li>
     	{{/each}}
+      {{else}}
+      <li class="list-group-item">
+        <div class="row">
+          <div class="col-md-12">
+            <p>There are no entries that match your filters and search criteria.</p>
+          </div>
+        </div>
+      </li>
+      {{/if}}
     </ul>
-
+    {{#if pagedContent}}
     <div class="row">
     	{{page-numbers content=pagedContent}}
     </div>
+    {{/if}}
   </div>
 </div>

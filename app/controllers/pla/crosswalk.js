@@ -82,7 +82,7 @@ export default Ember.Controller.extend({
 		var courses = [];
 		var uniqueCourses = [];
 
-		if (!categories.length && !query) { return model; }
+		if (categories.length === 0 && query === '') { return model; }
 
 		// return any courses that contain any matching categories
 		if (categories.length > 0) {
@@ -104,6 +104,7 @@ export default Ember.Controller.extend({
 
 		// apply search query
 		if (query) {
+			if (categories.length === 0) { courses = model; }
       courses = courses.filter(function(item) {
         if (item.get('title').toLowerCase().indexOf(query.toLowerCase()) > -1) { return true; }
       });
@@ -114,6 +115,12 @@ export default Ember.Controller.extend({
 
 	// set up pagination
 	pagedContent: pagedArray('sortedCourses', { perPageBinding: 'perPage' }),
-  perPage: 10
+  perPage: 10,
+
+  actions: {
+  	clearFilterQuery: function() {
+  		this.set('filterQuery', '');
+  	}
+  }
 
 });
