@@ -3,6 +3,9 @@ import pagedArray from 'ember-cli-pagination/computed/paged-array';
 
 export default Ember.Controller.extend({
 
+	// filter query
+	filterQuery: '',
+
 	// booleans
 	selectedBusinessAnalytics: false,
 	selectedBusinessIntelligence: false,
@@ -71,11 +74,15 @@ export default Ember.Controller.extend({
 		return categories;
 	}),
 
-	sortedCourses: Ember.computed('model.content', 'sortCategories', function() {
+	sortedCourses: Ember.computed('model.content', 'sortCategories', 'filterQuery', function() {
 
 		var model = this.get('model');
+		var query = this.get('filterQuery');
 		var categories = this.get('sortCategories');
 		var courses = [];
+		var uniqueCourses = [];
+
+		if (!categories.length && !query) { return model; }
 
 		// return any courses that contain any matching categories
 		if (categories.length > 0) {
@@ -84,20 +91,25 @@ export default Ember.Controller.extend({
 					if (course.get('category').contains(category)) { courses.push(course); }
 				});
 			});
-		} else {
-			// no categories returns the all data
-			return model;
+
+			// filter out duplicates
+			Ember.$.each(courses, function(i, el){
+	    	if(Ember.$.inArray(el, uniqueCourses) === -1) {
+	    		uniqueCourses.push(el);
+	    	}
+			});
+
+			courses = uniqueCourses;
 		}
 
-		// filter out duplicates
-		var uniqueCourses = [];
-		Ember.$.each(courses, function(i, el){
-    	if(Ember.$.inArray(el, uniqueCourses) === -1) {
-    		uniqueCourses.push(el);
-    	}
-		});
+		// apply search query
+		if (query) {
+      courses = courses.filter(function(item) {
+        if (item.get('title').toLowerCase().indexOf(query.toLowerCase()) > -1) { return true; }
+      });
+    }
 
-		return uniqueCourses;
+		return courses;
 	}),
 
 	// set up pagination

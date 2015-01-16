@@ -1,8 +1,35 @@
+
+  <div class="row">
+    <div class="col-md-2">
+      <h3>Occupations</h3>
+      <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
+    </div>
+    <div class="col-md-7">
+      {{page-numbers content=pagedContent}}
+    </div>
+    <div class="col-md-3">
+      <div class="input-group">
+        {{input value=filterQuery type="search" placeholder="Search by title..." class="form-control"}}
+        <span class="input-group-btn">
+          {{#if filterQuery}}
+            <button class="btn btn-default" type="button" {{action "clearFilterQuery"}}><i class="fa fa-times"></i></button>
+          {{else}}
+            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+          {{/if}}
+        </span>
+      </div> {{!-- /.input-group --}}
+    </div> {{!-- /.col col-sm-3 --}}
+  </div>
+
+
 <div class="row">
   <div class="col-md-2">
-    <h3>Occupations</h3>
-    <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
-    <hr>
+    <hr style="margin-top: 0px">
+    <h5>
+      <span>Filters</span>
+      <button class="pull-right">x</button>
+    </h5>
+
     {{i-check checked=selectedBusinessAnalytics}} Business Analytics <br>
     {{i-check checked=selectedBusinessIntelligence}} Business Intelligence <br>
     {{i-check checked=selectedComputerNetwork}} Computer Network <br>
@@ -36,10 +63,6 @@
     
   </div>
   <div class="col-md-10">
-    <div class="row">
-    	{{page-numbers content=pagedContent}}
-    </div>
-
     <ul class="list-group">
     	{{#each course in pagedContent}}
     	<li class="list-group-item">
