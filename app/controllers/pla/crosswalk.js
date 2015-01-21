@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
 	// filter query
 	filterQuery: '',
 
-	// booleans
+	// category booleans
 	selectedBusinessAnalytics: false,
 	selectedBusinessIntelligence: false,
 	selectedComputerNetwork: false,
@@ -103,7 +103,8 @@ export default Ember.Controller.extend({
       });
     }
 
-		return courses;
+    // return the courses sorted by match ('H', 'M')
+		return courses.sortBy('match');
 	}),
 
 	// set up pagination
