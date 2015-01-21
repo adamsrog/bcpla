@@ -82,7 +82,7 @@ export default Ember.Controller.extend({
 		var courses = [];
 
 		// return full model if no categories and no search query present
-		if (categories.length === 0 && query === '') { return model; }
+		if (categories.length === 0 && query === '') { return model.sortBy('match'); }
 
 		// return any courses that contain all selected categories
 		if (categories.length > 0) {
