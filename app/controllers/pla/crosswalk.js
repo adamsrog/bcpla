@@ -80,26 +80,19 @@ export default Ember.Controller.extend({
 		var query = this.get('filterQuery');
 		var categories = this.get('sortCategories');
 		var courses = [];
-		var uniqueCourses = [];
 
+		// return full model if no categories and no search query present
 		if (categories.length === 0 && query === '') { return model; }
 
-		// return any courses that contain any matching categories
+		// return any courses that contain all selected categories
 		if (categories.length > 0) {
-			categories.forEach(function(category) {
-				model.forEach(function(course) {
-					if (course.get('category').contains(category)) { courses.push(course); }
+			model.forEach(function(course) {
+				var count = 0;
+				categories.forEach(function(category) {
+					if (course.get('category').contains(category)) { count++;	}
 				});
+				if (categories.length === count) { courses.push(course); }
 			});
-
-			// filter out duplicates
-			Ember.$.each(courses, function(i, el){
-	    	if(Ember.$.inArray(el, uniqueCourses) === -1) {
-	    		uniqueCourses.push(el);
-	    	}
-			});
-
-			courses = uniqueCourses;
 		}
 
 		// apply search query
