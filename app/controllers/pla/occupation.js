@@ -16,10 +16,4 @@ export default Ember.Controller.extend({
 	pagedContent: pagedArray('sortedOccupations', { perPageBinding: 'perPage' }),
   perPage: 10,
 
-  actions: {
-  	sortOccupationsByCategory: function(category) {
-  		this.set('sortCategory', category);
-  	}
-  }
-
 });

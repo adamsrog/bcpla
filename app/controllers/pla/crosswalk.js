@@ -116,12 +116,6 @@ export default Ember.Controller.extend({
 	// set up pagination
 	pagedContent: pagedArray('sortedCourses', { pageBinding: "page", perPageBinding: 'perPage' }),
 	page: 1,
-  perPage: 10,
-
-  actions: {
-  	clearFilterQuery: function() {
-  		this.set('filterQuery', '');
-  	}
-  }
+  perPage: 10
 
 });
