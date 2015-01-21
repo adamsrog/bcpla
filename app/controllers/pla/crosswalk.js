@@ -80,6 +80,7 @@ export default Ember.Controller.extend({
 		var query = this.get('filterQuery');
 		var categories = this.get('sortCategories');
 		var courses = [];
+		this.set('page', 1);
 
 		// return full model if no categories and no search query present
 		if (categories.length === 0 && query === '') { return model.sortBy('match'); }
