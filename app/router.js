@@ -11,6 +11,8 @@ Router.map(function() {
   	this.route("occupation");
   	this.route("crosswalk");
   });
+  this.route('occupation');
+  this.route('crosswalk');
 });
 
 export default Router;
