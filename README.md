@@ -1,7 +1,7 @@
-# Bcpla
+# Bellvue College Prior Learning Assessment 
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Prototype Ember app to allow easy searching/sorting of Andy Brucia's data set.
+* [http://emsl.hiteducation.org](http://emsl.hiteducation.org)
 
 ## Prerequisites
 
