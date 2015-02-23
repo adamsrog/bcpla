@@ -1,11 +1,12 @@
 import {
   matchBadge
-} from 'bcpla/helpers/match-badge';
+} from '../../../helpers/match-badge';
+import { module, test } from 'qunit';
 
 module('MatchBadgeHelper');
 
 // Replace this with your real tests.
-test('it works', function() {
+test('it works', function(assert) {
   var result = matchBadge(42);
-  ok(result);
+  assert.ok(result);
 });
