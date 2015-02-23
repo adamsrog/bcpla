@@ -14,12 +14,15 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' 'google-analytics.com'",
       'font-src': "'self'",
       'connect-src': "'self'",
       'img-src': "'self' *",
       'style-src': "'self' 'unsafe-inline'",
       'report-uri': "'none'"
+    },
+    googleAnalytics: { 
+      webPropertyId: 'UA-59573010-1' 
     },
 
     APP: {

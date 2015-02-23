@@ -20,7 +20,6 @@ Crosswalk.reopenClass({
       "category":["electronic health records","health care","health care assistant", "health care database","health care specialist","health information technology","health technician","patient care","pharmacy technician"],
       "match":"M"
     },
-    
     {
       "id":"CGR-IS-002",
       "branch":"Coast Guard",
@@ -29,9 +28,7 @@ Crosswalk.reopenClass({
       "title":"Intelligence Specialist",
       "category":["business intelligence","data analysis"],
       "match":"M"
-
     },
-
     {
       "id":"CGR-ISM-001",
       "branch":"Coast Guard",
@@ -40,7 +37,6 @@ Crosswalk.reopenClass({
       "title":"Information Systems Management",
       "category":["computer network","database","help desk","information technology","network security","network systems"],
       "match":"H"
-
     },
     {
       "id":"CGR-IT-002",
@@ -50,7 +46,6 @@ Crosswalk.reopenClass({
       "title":"Information Systems Technician",
       "category":["database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
       "match":"H"
-
     },
     {
       "id":"CGR-MST-003",
@@ -60,7 +55,6 @@ Crosswalk.reopenClass({
       "title":"Marine Science Technician",
       "category":["health technician","Marine Science Technician","information technology","network systems"],
       "match":"M"
-
     },
     {
       "id":"CGR-OS-002",
@@ -70,7 +64,6 @@ Crosswalk.reopenClass({
       "title":"Operations Specialist",
       "category":["database","help desk"],
       "match":"M"
-
     },
     {
       "id":"CGR-YN-004",
@@ -80,7 +73,6 @@ Crosswalk.reopenClass({
       "title":"Yeoman",
       "category":["computer network","database","electronic health records","health information technology","information technology"],
       "match":"M"
-
     },
     {
       "id":"CGW-ELC-003",
@@ -90,7 +82,6 @@ Crosswalk.reopenClass({
       "title":"Electronics",
       "category":["computer network","information technology","Network analyst","network security","network systems"],
       "match":"M"
-
     },
     {
       "id":"CGW-ISM-001",
@@ -100,7 +91,6 @@ Crosswalk.reopenClass({
       "title":"Information Systems Management",
       "category":["business analytics","computer network","data analysis","database","database administration","health information technology","information technology","Network analyst","network systems"],
       "match":"H"
-
     },
     {
       "id":"CGW-MED-003",
@@ -119,17 +109,6 @@ Crosswalk.reopenClass({
       "title":"Operations Systems",
       "category":["computer network","help desk","information technology","network security","network systems"],
       "match":"M"
-   
-    },
-    {
-      "id":"LDO-642X-004",
-      "branch":"Navy",
-      "branchImage":"assets/images/navy.gif",
-      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=LDO-642X-004",
-      "title":"Data Processing",
-      "category":["computer network","Network analyst","network security","network systems"],
-      "match":"M"
-
     },
     {
       "id":"LDO-644X-004",
@@ -139,7 +118,15 @@ Crosswalk.reopenClass({
       "title":"Cryptology",
       "category":["computer network","data analysis","database","information technology","network administrator","Network analyst","network security","network systems"],
       "match":"M"
-
+    },
+    {
+      "id":"LDO-644X-004",
+      "branch":"Navy",
+      "branchImage":"assets/images/navy.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=LDO-644X-004",
+      "title":"Cryptology",
+      "category":["computer network","data analysis","database","information technology","network administrator","Network analyst","network security","network systems"],
+      "match":"M"
     },
     {
       "id":"LDO-645X-003",
@@ -149,8 +136,6 @@ Crosswalk.reopenClass({
       "title":"Intelligence",
       "category":["business analytics","business intelligence","computer network","help desk","information technology","Network analyst","network security","network systems"],
       "match":"M"
-
-
     },
     {
       "id":"LDO-646X-004",
@@ -160,8 +145,6 @@ Crosswalk.reopenClass({
       "title":"Meteorology/Oceanography",
       "category":["computer network","data analysis","database","information technology","Network analyst","network security","network systems"],
       "match":"M"
-
-
     },
     {
       "id":"MCE-0241-001",
@@ -169,7 +152,7 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/navy.gif",
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MCE-0241-001",
       "title":"Imagery Analysis Specialist",
-      "category":"computer network",
+      "category":["computer network"],
       "match":"M"
     },
     {
@@ -180,7 +163,6 @@ Crosswalk.reopenClass({
       "title":"Data Chief",
       "category":["business analytics","business intelligence","computer network","database administration","Network analyst","network security"],
       "match":"H"
-
     },
     {
       "id":"MCE-0689-001",
@@ -269,7 +251,7 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/army.gif",
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25N-001",
       "title":"Nodal Network Systems Operator-Maintainer",
-      "category":"network administrator",
+      "category":["network administrator"],
       "match":"H"
     },
     {
@@ -323,7 +305,7 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/navy.gif",
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=NER-AS-005",
       "title":"Aviation Support Equipment Technician (AS) ",
-      "category":"computer network",
+      "category":["computer network"],
       "match":"M"
     },
     {
@@ -387,6 +369,7 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=NER-CTN-002",
       "title":"Cryptologic Technician Networks",
       "category":["business analytics","business intelligence","computer network","computer network","data analysis","database","database administration","help desk","information technology","network administrator","network administrator","Network analyst","network security","network systems"],
+      "match":"M"
     },
     {
       "id":"NER-CTR-005",
@@ -431,7 +414,7 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=NER-HN-004",
       "title":"Hospitalman",
       "category":["health care","health informatics","health information technology","pharmacy","patient care", "electronic health records","health care assistant"],
-      "match":"H"
+      "match":"M"
     },
     {
       "id":"NER-IS-004",
@@ -512,7 +495,70 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-35N-004",
       "title":"Signals Intelligence Analyst",
       "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
-      "match":"H"  
+      "match":"H" 
+    },
+    {
+      "id":"MOS-25L-003",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25L-003",
+      "title":"Cable Systems Installer-Maintainer",
+      "category":["computer network","Network analyst","network security","network systems"],
+      "match":"M"   
+    },
+    {
+      "id":"MOS-25C-002",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25C-002",
+      "title":"Radio Operator-Maintainer",
+      "category":["computer network","database","information technology","Network analyst","network security","network systems"],
+      "match":"M"   
+    },
+    {
+      "id":"MOS-25E-001",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25E-001",
+      "title":"Electro-Magnetic Spectrum Manager",
+      "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
+      "match":"H"
+    },
+    {
+      "id":"MOS-25P-002",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25P-002",
+      "title":"Microwave Systems Operator-Maintainer",
+      "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
+      "match":"H"
+    },
+    {
+      "id":"MOS-27D-003",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-27D-003",
+      "title":"Paralegal Specialist",
+      "category":["computer network","database","information technology","Network analyst","network security","network systems"],
+      "match":"M"
+    },
+    {
+      "id":"MOS-35G-006",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-35G-006",
+      "title":"Geospatial Intelligence Imagery Analyst",
+      "category":["computer network","database","information technology","Network analyst","network security","network systems"],
+      "match":"M"
+    },
+    {
+      "id":"MOS-25S-003",
+      "branch":"Army",
+      "branchImage":"assets/images/army.gif",
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25S-003",
+      "title":"Satellite Communication Systems Operator-Maintainer",
+      "category":["computer network","database","information technology","Network analyst","network security","network systems"],
+      "match":"H"
     },
     {
       "id":"MOS-35Q-002",
@@ -539,7 +585,7 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-35T-005",
       "title":"Military Intelligence (MI) Systems Maintainer/Integrator",
       "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
-      "match":"H"  
+      "match":"H"
     },
     {
       "id":"MOS-68G-005",
