@@ -26,10 +26,15 @@ test('Page contents', function(assert) {
 });
 
 test('User interaction', function(assert) {
-	assert.expect(1);
+	assert.expect(3);
 	visit('/').then(function() {
 		click('.btn-view-occupation').then(function() {
 			assert.equal(currentRouteName(), 'pla.crosswalk', 'Clicking button transitions to crosswalk route');
+			fillIn('.search-box', 'crypto');
+			assert.equal(find('.glyphicon-remove').length, 1, 'Clear searchbox button is visible after fillIn()');
+			click('.glyphicon-remove').then(function() {
+				assert.equal(find('.glyphicon-remove').length, 0, 'After clearing searchbox, clear searchbox button is hidden');
+			});
 		});
 	});
 });
