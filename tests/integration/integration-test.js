@@ -13,11 +13,15 @@ module('Integration Tests', {
 });
 
 test('Page contents', function(assert) {
-	assert.expect(3);
+	assert.expect(5);
 	visit('/').then(function() {
 		assert.equal(find('.navbar').length, 1, 'Navbar is present');
-		assert.equal(find('.footer').length, 1, "Footer is present");
-		assert.equal(find('.btn-view-occupation').length, 1, "Button is present");
+		assert.equal(find('.footer').length, 1, 'Footer is present');
+		assert.equal(find('.btn-view-occupation').length, 1, 'Button is present');
+	});
+	visit('/pla/crosswalk').then(function() {
+		assert.equal(find('.search-box').length, 1, 'Searchbox is present');
+		assert.equal(find('.glyphicon-remove').length, 0, 'Clear searchbox button isn\'t visible');
 	});
 });
 
