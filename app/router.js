@@ -8,11 +8,8 @@ var Router = Ember.Router.extend(googlePageView, {
 
 Router.map(function() {
   this.resource("pla", function() {
-  	this.route("occupation");
-  	this.route("crosswalk");
+    this.route("crosswalk");
   });
-  this.route('occupation');
-  this.route('crosswalk');
 });
 
 export default Router;

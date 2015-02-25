@@ -1,4 +1,4 @@
-# Bellvue College Prior Learning Assessment 
+# Bellevue College Prior Learning Assessment 
 
 Prototype Ember app to allow easy searching/sorting of Andy Brucia's data set.
 * [http://emsl.hiteducation.org](http://emsl.hiteducation.org)
