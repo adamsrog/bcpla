@@ -67,26 +67,8 @@
   <div class="col-md-10">
     <ul class="list-group">
       {{#if pagedContent}}
-    	{{#each course in pagedContent}}
-    	<li class="list-group-item">
-        <div class="row">
-          <div class="col-md-1">
-            <img {{bind-attr src=course.branchImage alt=course.branch}} width=75>
-          </div>
-          <div class="col-md-11">
-            <strong><a {{bind-attr href=course.url}} target="_blank">{{course.title}}</a></strong>
-            <span class="pull-right">
-                {{match-badge course.match}}
-            </span><br>
-            <small>{{course.id}}</small><br>
-            <small>{{course.category}}
-            {{!-- {{#each category in course.category}}
-              {{category}}
-            {{/each}} --}}
-            </small>
-          </div>
-        </div>
-    	</li>
+    	{{#each occupation in pagedContent}}
+        {{occupation-row occupation=occupation}}
     	{{/each}}
       {{else}}
       <li class="list-group-item">
@@ -105,9 +87,7 @@
 <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-7">
-    {{#if pagedContent}}
     {{page-numbers content=pagedContent}}
-    {{/if}}
   </div>
   <div class="col-sm-3"></div>
 </div>
