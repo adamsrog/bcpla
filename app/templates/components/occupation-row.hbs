@@ -6,7 +6,7 @@
 		<div class="col-md-11">
 			<strong><a {{bind-attr href=occupation.url}} target="_blank">{{occupation.title}}</a></strong>
 			<span class="pull-right">
-				{{match-badge occupation.match}}
+				<span {{bind-attr class=":badge matchBadgeClass"}}>{{matchText}}</span>
 			</span><br>
 			<small>{{occupation.id}}</small><br>
 			<small>{{occupation.category}}</small>
