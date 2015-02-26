@@ -23,3 +23,11 @@ body {
 .container .text-muted {
   margin: 20px 0;
 }
+
+.is-medium {
+  background-color: #FFB03B;
+}
+
+.is-high {
+  background-color: #468966;
+}
