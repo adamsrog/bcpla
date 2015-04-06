@@ -649,8 +649,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/cyber-surety/",
       "title":"Cyber Surety",
-      "category":[],
-      "match":"",
+      "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
+      "match":"H",
       "pdf":"assets/pdf/AFSC-3D0X3_Cyber-Surety.pdf"
     },
     {
@@ -659,8 +659,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/cyber-systems-operations/",
       "title":"Cyber Systems Operation",
-      "category":[],
-      "match":"",
+      "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
+      "match":"H",
       "pdf":"assets/pdf/AFSC-3D0X2_Cyber-Systems-Operations.pdf"
     },
     {
@@ -669,8 +669,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/cyber-transport-systems/",
       "title":"Cyber Transport Systems",
-      "category":[],
-      "match":"",
+      "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
+      "match":"H",
       "pdf":"assets/pdf/AFSC-3D1X2_Cyber-Transport-Systems.pdf"
     },
     {
@@ -679,8 +679,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/cyber-systems-operations/",
       "title":"Cyberspace System Operations",
-      "category":[],
-      "match":"",
+      "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
+      "match":"H",
       "pdf":"assets/pdf/AFSC-1B4X1_Cyberspace-System-Operations.pdf"
     },
     {
@@ -689,8 +689,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/diagnostic-imaging/",
       "title":"Diagnostic Imaging",
-      "category":[],
-      "match":"",
+      "category":["computer network","database","electronic health records","health information technology","information technology"],
+      "match":"H",
       "pdf":"assets/pdf/AFSC-4R0X1_Diagnostic-Imaging.pdf"
     },
     {
@@ -699,8 +699,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://usmilitary.about.com/od/airforceenlistedjobs/a/afjob1n4x1.htm",
       "title":"Fusion Analyst",
-      "category":[],
-      "match":"",
+      "category":["computer network","database","electronic health records","health information technology","information technology"],
+      "match":"M",
       "pdf":"assets/pdf/AFSC-1N4X1_Fusion-Analyst.pdf"
     },
     {
@@ -709,8 +709,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/health-services-management/",
       "title":"Health Services Management",
-      "category":[],
-      "match":"",
+      "category":["electronic health records","health care","health care assistant", "health care database","health care specialist","health information technology","health technician","patient care","pharmacy technician"],
+      "match":"H",
       "pdf":"assets/pdf/AFSC-4A0X1_Health-Services-Mangement.pdf"
     },
     {
@@ -719,8 +719,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/operations-intelligence-specialist/",
       "title":"Operations Intelligence",
-      "category":[],
-      "match":"",
+      "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
+      "match":"M",
       "pdf":"assets/pdf/AFSC-1N0X1_Operations-Intelligence.pdf"
     },
     {
@@ -729,8 +729,8 @@ Crosswalk.reopenClass({
       "branchImage":"assets/images/air_force.gif",
       "url":"http://www.airforce.com/careers/detail/pharmacy-specialist/",
       "title":"Pharmacy",
-      "category":[],
-      "match":"",
+      "category":["electronic health records","health care","health care assistant", "health care database","health care specialist","health information technology","health technician","patient care","pharmacy technician"],
+      "match":"M",
       "pdf":"assets/pdf/AFSC-4P0X1_Pharmacy.pdf"
     }
   ]
