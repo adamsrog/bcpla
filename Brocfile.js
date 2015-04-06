@@ -27,7 +27,4 @@ app.import({
 	production: app.bowerDirectory + '/bootstrap/dist/js/bootstrap.min.js'
 });
 
-// app.import(app.bowerDirectory + '')
-
-
 module.exports = app.toTree();
