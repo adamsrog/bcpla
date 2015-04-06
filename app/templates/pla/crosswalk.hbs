@@ -29,7 +29,7 @@
     <hr style="margin-top: 0px">
     <h5>
       <span>Filters</span>
-      {{#if categories}}<button class="pull-right">x</button>{{/if}}
+      {{#if sortCategories}}<button class="pull-right" {{action "clearCategories"}}>x</button>{{/if}}
     </h5>
 
     {{i-check checked=selectedBusinessAnalytics}} Business Analytics <br>
