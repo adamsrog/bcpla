@@ -5,6 +5,9 @@
 		</div>
 		<div class="col-md-11">
 			<strong><a href={{occupation.url}} target="_blank">{{occupation.title}}</a></strong>
+			{{#if occupation.pdf}}
+				| <small><a href={{occupation.pdf}} target="_blank"><i class="glyphicon glyphicon-file"></i>View PDF</a></small>
+			{{/if}}
 			<span class="pull-right">
 				<span class="badge {{matchBadgeClass}}">{{matchText}}</span>
 			</span><br>

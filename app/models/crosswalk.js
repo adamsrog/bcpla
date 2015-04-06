@@ -711,7 +711,7 @@ Crosswalk.reopenClass({
       "title":"Health Services Management",
       "category":[],
       "match":"",
-      "pdf":""
+      "pdf":"assets/pdf/AFSC-4A0X1_Health-Services-Mangement.pdf"
     },
     {
       "id":"AFSC-1N0X1",
