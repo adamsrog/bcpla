@@ -6,7 +6,8 @@ var Crosswalk = DS.Model.extend({
   url: DS.attr('url'),
 	title: DS.attr('string'),
 	category: DS.attr(),
-  match: DS.attr('string')
+  match: DS.attr('string'),
+  pdf: DS.attr('string')
 });
 
 Crosswalk.reopenClass({
@@ -111,12 +112,12 @@ Crosswalk.reopenClass({
       "match":"M"
     },
     {
-      "id":"LDO-644X-004",
+      "id":"LDO-642X-004",
       "branch":"Navy",
       "branchImage":"assets/images/navy.gif",
-      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=LDO-644X-004",
-      "title":"Cryptology",
-      "category":["computer network","data analysis","database","information technology","network administrator","Network analyst","network security","network systems"],
+      "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=LDO-642X-004",
+      "title":"Data Processing",
+      "category":["computer network","Network analyst","network security","network systems"],
       "match":"M"
     },
     {
@@ -171,7 +172,8 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MCE-0689-001",
       "title":"Information Assurance Technician",
       "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
-      "match":"H"
+      "match":"H",
+      "pdf":"assets/pdf/MCE-0689-001_Information-Assurance-Technician.pdf"
     },
     {
       "id":"MCE-2171-001",
@@ -234,7 +236,8 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25B-003",
       "title":"Information Technology Specialist",
       "category":["business analytics","business intelligence","computer network","database administration","health information technology","health technician","healthcare technology","help desk","Network analyst","network security","network security"],
-      "match":"H"
+      "match":"H",
+      "pdf":"assets/pdf/MOS-25B-003_Information-Technology-Specialist.pdf"
     },
     {
       "id":"MOS-25N-001",
@@ -387,7 +390,8 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=NER-CTT-005",
       "title":"Cryptologic Technician, Technical",
       "category":["business analytics","business intelligence","computer network","data analysis","database","database administration","health information technology","information technology","network security","network systems"],
-      "match":"H"
+      "match":"H",
+      "pdf":"assets/pdf/NER-CTT-005_Cryptologic-Technician-Technical.pdf"
     },
     {
       "id":"NER-ETR-002",
@@ -405,7 +409,8 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=NER-HM-004",
       "title":"Hospital Corpsman",
       "category":["electronic health records","health care","health care assistant","health care database","health informatics","health information technology","information technology","patient care","pharmacy"],
-      "match":"H"
+      "match":"H",
+      "pdf":"assets/pdf/NER-HM-004_Hospital-Corpsman.pdf"
     },
     {
       "id":"NER-HN-004",
@@ -432,7 +437,8 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=NER-IT-003",
       "title":"Information Systems Technician ",
       "category":["business analytics","business intelligence","computer network","database administration","health information technology","health technician","information technology","Network analyst","network security","network systems"],
-      "match":"H"
+      "match":"H",
+      "pdf":"assets/pdf/NER-IT-003_Information-Systems-Technician.pdf"
     },
     {
       "id":"NER-PS-001",
@@ -531,7 +537,8 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-25P-002",
       "title":"Microwave Systems Operator-Maintainer",
       "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
-      "match":"H"
+      "match":"H",
+      "pdf":"assets/pdf/MOS-25P-002_Microwave-Systems-Operator-Maintainer.pdf"
     },
     {
       "id":"MOS-27D-003",
@@ -567,7 +574,7 @@ Crosswalk.reopenClass({
       "url":"http://www2.acenet.edu/militaryguide/ShowAceOccupations.cfm?ACEID=MOS-35Q-002",
       "title":"Cryptologic Network Warfare Specialist",
       "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
-      "match":"H"  
+      "match":"H"
     },
     {
       "id":"MOS-35S-005",
@@ -595,6 +602,136 @@ Crosswalk.reopenClass({
       "title":"Patient Administration Specialist",
       "category":["electronic health records","health care","health care database","health information technology","health technician","patient care"],
       "match":"H"
+    },
+    {
+      "id":"AFSC-4A2X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/biomedical-equipment/",
+      "title":"Biomedical Equipment",
+      "category":["health care","health care database","health information technology","health technician", "database", "database administration"],
+      "match":"M",
+      "pdf":"assets/pdf/AFSC-4A2X1_Biomedical-Equipment.pdf" 
+    },
+    {
+      "id":"AFSC-4H0X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/cardiopulmonary-laboratory/",
+      "title":"Cardiopulmonary Laboratory",
+      "category":["health care","health informatics","health information technology","pharmacy","patient care", "electronic health records","health care assistant"],
+      "match":"M",
+      "pdf":"assets/pdf/AFSC-4H0X1_Cardiopulmonary-Laboratory.pdf" 
+    },
+    {
+      "id":"AFSC-3D1X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/client-systems/",
+      "title":"Client Systems",
+      "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
+      "match":"H",
+      "pdf":"assets/pdf/AFSC-3D1X1_Client-Systems.pdf" 
+    },
+    {
+      "id":"AFSC-3D0X4",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/computer-systems-programming/",
+      "title":"Computer Systems Programming",
+      "category":["computer network","data analysis","database","database administration","information technology","Network analyst","network security","network systems"],
+      "match":"H",
+      "pdf":"assets/pdf/AFSC-3D0X4_Computer-Systems-Programming.pdf" 
+    },
+    {
+      "id":"AFSC-3D1X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/cyber-surety/",
+      "title":"Cyber Surety",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-3D0X3_Cyber-Surety.pdf"
+    },
+    {
+      "id":"AFSC-3D0X2",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/cyber-systems-operations/",
+      "title":"Cyber Systems Operation",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-3D0X2_Cyber-Systems-Operations.pdf"
+    },
+    {
+      "id":"AFSC-3D1X2",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/cyber-transport-systems/",
+      "title":"Cyber Transport Systems",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-3D1X2_Cyber-Transport-Systems.pdf"
+    },
+    {
+      "id":"AFSC-1B4X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/cyber-systems-operations/",
+      "title":"Cyberspace System Operations",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-1B4X1_Cyberspace-System-Operations.pdf"
+    },
+    {
+      "id":"AFSC-4R0X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/diagnostic-imaging/",
+      "title":"Diagnostic Imaging",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-4R0X1_Diagnostic-Imaging.pdf"
+    },
+    {
+      "id":"AFSC-1N4X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://usmilitary.about.com/od/airforceenlistedjobs/a/afjob1n4x1.htm",
+      "title":"Fusion Analyst",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-1N4X1_Fusion-Analyst.pdf"
+    },
+    {
+      "id":"AFSC-4A0X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/health-services-management/",
+      "title":"Health Services Management",
+      "category":[],
+      "match":"",
+      "pdf":""
+    },
+    {
+      "id":"AFSC-1N0X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/operations-intelligence-specialist/",
+      "title":"Operations Intelligence",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-1N0X1_Operations-Intelligence.pdf"
+    },
+    {
+      "id":"AFSC-4P0X1",
+      "branch":"Air Force",
+      "branchImage":"assets/images/air_force.gif",
+      "url":"http://www.airforce.com/careers/detail/pharmacy-specialist/",
+      "title":"Pharmacy",
+      "category":[],
+      "match":"",
+      "pdf":"assets/pdf/AFSC-4P0X1_Pharmacy.pdf"
     }
   ]
 });
