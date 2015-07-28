@@ -67,7 +67,7 @@
   <div class="col-md-10">
     <ul class="list-group">
       {{#if pagedContent}}
-    	{{#each occupation in pagedContent}}
+    	{{#each pagedContent as |occupation|}}
         {{occupation-row occupation=occupation}}
     	{{/each}}
       {{else}}
