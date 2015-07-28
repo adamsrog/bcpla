@@ -19,13 +19,12 @@ var app = new EmberApp();
 
 // import bootstrap
 app.import({
-	development: 'bower_components/bootstrap/dist/css/bootstrap.css',
-	production: 'bower_components/bootstrap/dist/css/bootstrap.min.css'
+	development: app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css',
+	production: app.bowerDirectory + '/bootstrap/dist/css/bootstrap.min.css'
 });
 app.import({
-	development: 'bower_components/bootstrap/dist/js/bootstrap.js',
-	production: 'bower_components/bootstrap/dist/js/bootstrap.min.js'
+	development: app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js',
+	production: app.bowerDirectory + '/bootstrap/dist/js/bootstrap.min.js'
 });
-
 
 module.exports = app.toTree();

@@ -8,6 +8,9 @@ export default Ember.Route.extend({
 	actions: {
 		clearFilterQuery: function() {
 			this.controllerFor('pla/crosswalk').set('filterQuery', '');
+		},
+		clearCategories: function() {
+			this.controllerFor('pla/crosswalk').set('sortCategories', []);
 		}
 	}
 });
