@@ -1,12 +1,12 @@
 <li class="list-group-item">
 	<div class="row">
 		<div class="col-md-1">
-			<img {{bind-attr src=occupation.branchImage alt=occupation.branch}} width=75>
+			<img src={{occupation.branchImage}} alt={{occupation.branch}} width=75>
 		</div>
 		<div class="col-md-11">
-			<strong><a {{bind-attr href=occupation.url}} target="_blank">{{occupation.title}}</a></strong>
+			<strong><a href={{occupation.url}} target="_blank">{{occupation.title}}</a></strong>
 			<span class="pull-right">
-				<span {{bind-attr class=":badge matchBadgeClass"}}>{{matchText}}</span>
+				<span class="badge {{matchBadgeClass}}">{{matchText}}</span>
 			</span><br>
 			<small>{{occupation.id}}</small><br>
 			<small>{{occupation.category}}</small>
