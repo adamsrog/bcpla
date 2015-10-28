@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
 
 	// filter query
 	filterQuery: '',
+	showFilters: false,
 
 	// category booleans
 	selectedBusinessAnalytics: false,

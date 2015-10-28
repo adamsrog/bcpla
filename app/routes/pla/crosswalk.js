@@ -11,6 +11,10 @@ export default Ember.Route.extend({
 		},
 		clearCategories: function() {
 			this.controllerFor('pla/crosswalk').set('sortCategories', []);
+		},
+		toggleFilters: function() {
+			var showFilters = !this.controllerFor('pla/crosswalk').get('showFilters');
+			this.controllerFor('pla/crosswalk').set('showFilters', showFilters);
 		}
 	}
 });

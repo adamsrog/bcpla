@@ -1,110 +1,143 @@
 
 <div class="row">
-  <div class="col-md-2">
-    <h3>Occupations 
-      <div class="visible-sm-block visible-xs-block">
-      {{#if showFilters}}
-        <button class="btn btn-default glyphicon glyphicon-filter pull-right" type="button" {{action "toggleFilters"}}> Filter</button>
-      {{else}}
-        <button class="btn btn-primary glyphicon glyphicon-filter pull-right" type="button" {{action "toggleFilters"}}> Filter</button>
-      {{/if}}
-      </div>
-    </h3>
-    <small>Showing {{sortedCourses.length}} of {{model.length}}</small>
-  </div>
-  <div class="col-md-7">
-    {{#if pagedContent}}
-    {{page-numbers content=pagedContent}}
-    {{/if}}
-  </div>
-  <div class="col-md-3">
-    <div class="input-group">
-      {{input value=filterQuery type="text" placeholder="Search by title..." class="search-box form-control"}}
-      <span class="input-group-btn">
-        {{#if filterQuery}}
-        <button class="btn btn-default glyphicon glyphicon-remove" type="button" {{action "clearFilterQuery"}}></button>
-        {{else}}
-        <button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
-        {{/if}}
-      </span>
-    </div> {{!-- /.input-group --}}
-  </div> {{!-- /.col col-sm-3 --}}
+	<div class="col-md-2">
+		<h3>Occupations 
+			<div class="visible-sm-block visible-xs-block">
+			{{#if showFilters}}
+				<button class="btn btn-primary glyphicon glyphicon-filter pull-right" type="button" {{action "toggleFilters"}}> Filter</button>
+			{{else}}
+				<button class="btn btn-default glyphicon glyphicon-filter pull-right" type="button" {{action "toggleFilters"}}> Filter</button>
+			{{/if}}
+			</div>
+		</h3>
+		<small>Showing {{sortedCourses.length}} of {{model.length}}</small>
+	</div>
+	<div class="col-md-7">
+		{{#if pagedContent}}
+		{{page-numbers content=pagedContent}}
+		{{/if}}
+	</div>
+	<div class="col-md-3">
+		<div class="input-group">
+			{{input value=filterQuery type="text" placeholder="Search by title..." class="search-box form-control"}}
+			<span class="input-group-btn">
+				{{#if filterQuery}}
+				<button class="btn btn-default glyphicon glyphicon-remove" type="button" {{action "clearFilterQuery"}}></button>
+				{{else}}
+				<button class="btn btn-default glyphicon glyphicon-search" type="button"></button>
+				{{/if}}
+			</span>
+		</div> {{!-- /.input-group --}}
+	</div> {{!-- /.col col-sm-3 --}}
 </div>
 
 
 <div class="row">
 
-  <div class="col-md-2 col-sm-12 col-xs-12">
+	<div class="col-md-2 col-sm-12 col-xs-12">
 
-    <div class="visible-sm-block visible-xs-block">
-      
-    </div>
+		<div class="visible-sm-block visible-xs-block">
+			{{#if showFilters}}
+			<ul class="list-group">
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedBusinessAnalytics}} Business Analytics</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedBusinessIntelligence}} Business Intelligence</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedComputerNetwork}} Computer Network</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedDataAnalysis}} Data Analysis</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedDatabase}} Database</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedDatabaseAdministration}} Database Admin</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedElectronicHealthRecords}} EHRs</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthCare}} Health Care</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthInformatics}} Health Informatics</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthInformationTechnology}} Health IT</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthTechnician}} Health Technician</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthcareAnalyst}} Healthcare Analyst</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthCareAssistant}} Healthcare Assistant</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthCareDatabase}} Healthcare Database</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthCareSpecialist}} Healthcare Specialist</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHealthcareTechnology}} Healthcare Tech</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedHelpDesk}} Help Desk</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedInformationTechnology}} IT</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedMedicalAssistant}} Medical Assistant</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedMedicalCharting}} Medical Charting</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedMedicalRecords}} Medical Records</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedNetworkAdministrator}} Network Admin</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedNetworkAnalyst}} Network Analyst</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedNetworkSecurity}} Network Security</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedNetworkSystems}} Network Systems</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedPatientCare}} Patient Care</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedPharmacy}} Pharmacy</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedPharmacySpecialist}} Pharmacy Specialist</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedPharmacyTechnician}} Pharmacy Technician</label></li>
+				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedSoftwareDevelopment}} Software Development</label></li>
+			</ul>
+			{{/if}}				
+		</div>
 
-    <div class="visible-md-block visible-lg-block">
-      <hr style="margin-top: 0px">
-      <h5>
-        <span>Filters</span>
-        {{#if sortCategories}}<button class="pull-right" {{action "clearCategories"}}>x</button>{{/if}}
-      </h5>
+		<div class="visible-md-block visible-lg-block">
+			<hr style="margin-top: 0px">
+			<h5>
+				<span>Filters</span>
+				{{#if sortCategories}}<button class="pull-right" {{action "clearCategories"}}>x</button>{{/if}}
+			</h5>
 
-      <label>{{input type="checkbox" checked=selectedBusinessAnalytics}} Business Analytics</label><br>
-      <label>{{input type="checkbox" checked=selectedBusinessIntelligence}} Business Intelligence</label><br>
-      <label>{{input type="checkbox" checked=selectedComputerNetwork}} Computer Network</label><br>
-      <label>{{input type="checkbox" checked=selectedDataAnalysis}} Data Analysis</label><br>
-      <label>{{input type="checkbox" checked=selectedDatabase}} Database</label><br>
-      <label>{{input type="checkbox" checked=selectedDatabaseAdministration}} Database Admin</label><br>
-      <label>{{input type="checkbox" checked=selectedElectronicHealthRecords}} EHRs</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthCare}} Health Care</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthInformatics}} Health Informatics</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthInformationTechnology}} Health IT</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthTechnician}} Health Technician</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthcareAnalyst}} Healthcare Analyst</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthCareAssistant}} Healthcare Assistant</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthCareDatabase}} Healthcare Database</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthCareSpecialist}} Healthcare Specialist</label><br>
-      <label>{{input type="checkbox" checked=selectedHealthcareTechnology}} Healthcare Tech</label><br>
-      <label>{{input type="checkbox" checked=selectedHelpDesk}} Help Desk</label><br>
-      <label>{{input type="checkbox" checked=selectedInformationTechnology}} IT</label><br>
-      <label>{{input type="checkbox" checked=selectedMedicalAssistant}} Medical Assistant</label><br>
-      <label>{{input type="checkbox" checked=selectedMedicalCharting}} Medical Charting</label><br>
-      <label>{{input type="checkbox" checked=selectedMedicalRecords}} Medical Records</label><br>
-      <label>{{input type="checkbox" checked=selectedNetworkAdministrator}} Network Admin</label><br>
-      <label>{{input type="checkbox" checked=selectedNetworkAnalyst}} Network Analyst</label><br>
-      <label>{{input type="checkbox" checked=selectedNetworkSecurity}} Network Security</label><br>
-      <label>{{input type="checkbox" checked=selectedNetworkSystems}} Network Systems</label><br>
-      <label>{{input type="checkbox" checked=selectedPatientCare}} Patient Care</label><br>
-      <label>{{input type="checkbox" checked=selectedPharmacy}} Pharmacy</label><br>
-      <label>{{input type="checkbox" checked=selectedPharmacySpecialist}} Pharmacy Specialist</label><br>
-      <label>{{input type="checkbox" checked=selectedPharmacyTechnician}} Pharmacy Technician</label><br>
-      <label>{{input type="checkbox" checked=selectedSoftwareDevelopment}} Software Development</label><br>   
-    </div>   
-  </div>
+			<label>{{input type="checkbox" checked=selectedBusinessAnalytics}} Business Analytics</label><br>
+			<label>{{input type="checkbox" checked=selectedBusinessIntelligence}} Business Intelligence</label><br>
+			<label>{{input type="checkbox" checked=selectedComputerNetwork}} Computer Network</label><br>
+			<label>{{input type="checkbox" checked=selectedDataAnalysis}} Data Analysis</label><br>
+			<label>{{input type="checkbox" checked=selectedDatabase}} Database</label><br>
+			<label>{{input type="checkbox" checked=selectedDatabaseAdministration}} Database Admin</label><br>
+			<label>{{input type="checkbox" checked=selectedElectronicHealthRecords}} EHRs</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthCare}} Health Care</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthInformatics}} Health Informatics</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthInformationTechnology}} Health IT</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthTechnician}} Health Technician</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthcareAnalyst}} Healthcare Analyst</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthCareAssistant}} Healthcare Assistant</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthCareDatabase}} Healthcare Database</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthCareSpecialist}} Healthcare Specialist</label><br>
+			<label>{{input type="checkbox" checked=selectedHealthcareTechnology}} Healthcare Tech</label><br>
+			<label>{{input type="checkbox" checked=selectedHelpDesk}} Help Desk</label><br>
+			<label>{{input type="checkbox" checked=selectedInformationTechnology}} IT</label><br>
+			<label>{{input type="checkbox" checked=selectedMedicalAssistant}} Medical Assistant</label><br>
+			<label>{{input type="checkbox" checked=selectedMedicalCharting}} Medical Charting</label><br>
+			<label>{{input type="checkbox" checked=selectedMedicalRecords}} Medical Records</label><br>
+			<label>{{input type="checkbox" checked=selectedNetworkAdministrator}} Network Admin</label><br>
+			<label>{{input type="checkbox" checked=selectedNetworkAnalyst}} Network Analyst</label><br>
+			<label>{{input type="checkbox" checked=selectedNetworkSecurity}} Network Security</label><br>
+			<label>{{input type="checkbox" checked=selectedNetworkSystems}} Network Systems</label><br>
+			<label>{{input type="checkbox" checked=selectedPatientCare}} Patient Care</label><br>
+			<label>{{input type="checkbox" checked=selectedPharmacy}} Pharmacy</label><br>
+			<label>{{input type="checkbox" checked=selectedPharmacySpecialist}} Pharmacy Specialist</label><br>
+			<label>{{input type="checkbox" checked=selectedPharmacyTechnician}} Pharmacy Technician</label><br>
+			<label>{{input type="checkbox" checked=selectedSoftwareDevelopment}} Software Development</label><br>
+		</div>   
+	</div>
 
-  <div class="col-md-10 col-sm-12 col-xs-12">
-    <ul class="list-group">
-      {{#if pagedContent}}
-    	{{#each pagedContent as |occupation|}}
-        {{occupation-row occupation=occupation}}
-    	{{/each}}
-      {{else}}
-      <li class="list-group-item">
-        <div class="row">
-          <div class="col-md-12">
-            <p>There are no entries that match your filters and search criteria.</p>
-          </div>
-        </div>
-      </li>
-      {{/if}}
-    </ul>
-  </div>
+	<div class="col-md-10 col-sm-12 col-xs-12">
+		<ul class="list-group">
+			{{#if pagedContent}}
+			{{#each pagedContent as |occupation|}}
+				{{occupation-row occupation=occupation}}
+			{{/each}}
+			{{else}}
+			<li class="list-group-item">
+				<div class="row">
+					<div class="col-md-12">
+						<p>There are no entries that match your filters and search criteria.</p>
+					</div>
+				</div>
+			</li>
+			{{/if}}
+		</ul>
+	</div>
 </div>
 
 {{#if pagedContent}}
 <div class="row">
-  <div class="col-md-2"></div>
-  <div class="col-md-7">
-    {{page-numbers content=pagedContent}}
-  </div>
-  <div class="col-sm-3"></div>
+	<div class="col-md-2"></div>
+	<div class="col-md-7">
+		{{page-numbers content=pagedContent}}
+	</div>
+	<div class="col-sm-3"></div>
 </div>
 {{/if}}
