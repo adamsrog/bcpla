@@ -31,3 +31,8 @@ body {
 .is-high {
   background-color: #468966;
 }
+
+label {
+  font-size: 0.8em;
+  font-weight: normal;
+}
