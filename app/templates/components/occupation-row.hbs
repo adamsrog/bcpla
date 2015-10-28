@@ -1,9 +1,9 @@
 <li class="list-group-item">
 	<div class="row">
-		<div class="col-md-1">
-			<img src={{occupation.branchImage}} alt={{occupation.branch}} width=75>
+		<div class="col-md-2 col-sm-2 hidden-xs">
+			<img src={{occupation.branchImage}} class="img-responsive" alt={{occupation.branch}} width="100%">
 		</div>
-		<div class="col-md-11">
+		<div class="col-md-10 col-sm-10 col-xs-12">
 			<strong><a href={{occupation.url}} target="_blank">{{occupation.title}}</a></strong>
 			{{#if occupation.pdf}}
 				| <small><a href={{occupation.pdf}} target="_blank"><i class="glyphicon glyphicon-file"></i>View PDF</a></small>
@@ -11,6 +11,7 @@
 			<span class="pull-right">
 				<span class="badge {{matchBadgeClass}}">{{matchText}}</span>
 			</span><br>
+			<span class="visible-xs-inline">Branch: {{occupation.branch}}<br></span>
 			<small>{{occupation.id}}</small><br>
 			<small>{{occupation.category}}</small>
 		</div>

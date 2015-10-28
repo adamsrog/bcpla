@@ -69,6 +69,7 @@
 				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedPharmacySpecialist}} Pharmacy Specialist</label></li>
 				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedPharmacyTechnician}} Pharmacy Technician</label></li>
 				<li class="list-group-item"><label>{{input type="checkbox" checked=selectedSoftwareDevelopment}} Software Development</label></li>
+				<li class="list-group-item text-center"><button class="btn btn-default glyphicon glyphicon-remove" type="button" {{action "clearCategories"}}> Clear Filters</button></li>
 			</ul>
 			{{/if}}				
 		</div>
@@ -77,7 +78,7 @@
 			<hr style="margin-top: 0px">
 			<h5>
 				<span>Filters</span>
-				{{#if sortCategories}}<button class="pull-right" {{action "clearCategories"}}>x</button>{{/if}}
+				{{#if sortCategories}}<button class="btn btn-default btn-sm glyphicon glyphicon-remove pull-right" {{action "clearCategories"}}></button>{{/if}}
 			</h5>
 
 			<label>{{input type="checkbox" checked=selectedBusinessAnalytics}} Business Analytics</label><br>

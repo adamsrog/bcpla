@@ -42,7 +42,7 @@ export default Ember.Route.extend({
 				selectedPharmacyTechnician: false,
 				selectedSoftwareDevelopment: false
 			});
-			this.controllerFor('pla/crosswalk').set('sortCategories', []);
+			this.controllerFor('pla/crosswalk').get('sortCategories').clear();
 		},
 		toggleFilters: function() {
 			var showFilters = !this.controllerFor('pla/crosswalk').get('showFilters');
